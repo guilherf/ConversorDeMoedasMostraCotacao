@@ -1,4 +1,4 @@
-package net.bifewagyu;
+package net.bifewagyu.cambios;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -16,6 +16,15 @@ import java.util.regex.Pattern;
 public class ConexcaoAPICambio {
 
     static String urlCambios = "https://economia.awesomeapi.com.br/xml/available";
+
+
+
+    // refazer para retornar erros e voltar para lista de após fazer a conversão
+    // algum dia eu penso se eu faço ou não
+
+    // funcionando eu não mexo até saber fazer diferente
+
+
 
 
     public static void connect() throws IOException, InterruptedException {
@@ -98,7 +107,7 @@ public class ConexcaoAPICambio {
         }
     }
 
-    private static void cambio (HttpResponse < String > response2) {
+    private static void cambio(HttpResponse < String > response2) {
         String resultado = response2.body();
         Pattern pattern1 = Pattern.compile("<([A-Z\\-]+)>([^<]+)</([A-Z\\-]+)>");
         Matcher matcher1 = pattern1.matcher(resultado);

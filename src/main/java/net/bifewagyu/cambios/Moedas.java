@@ -1,4 +1,4 @@
-package net.bifewagyu;
+package net.bifewagyu.cambios;
 
 public class Moedas {
 
